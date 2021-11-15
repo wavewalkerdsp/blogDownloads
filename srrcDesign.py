@@ -67,23 +67,23 @@ def srrcDesign ( SPS, span, beta ):
 	invalidParameter = False
 
 	if (SPS <= 1):
-		print('SPS must be greater than 1')
+		print('srrcDesign.py: SPS must be greater than 1')
 		invalidParameter = True
 
 	if ((int(SPS) - SPS) > 1e-10):
-		print('SPS must be an integer')
+		print('srrcDesign.py: SPS must be an integer')
 		invalidParameter = True
 
 	if (span < 1):
-		print('span must be greater than or equal to 1')
+		print('srrcDesign.py: span must be greater than or equal to 1')
 		invalidParameter = True
 
 	if ((int(span) - span) > 1e-10):
-		print('span must be an integer')
+		print('srrcDesign.py: span must be an integer')
 		invalidParameter = True
 
 	if (beta < 0):
-		print('beta must be greater than or equal to 0')
+		print('srrcDesign.py: beta must be greater than or equal to 0')
 		invalidParameter = True
 
 	# check to see if a bad parameter was passed in

@@ -54,22 +54,22 @@ def halfBandDesign ( filterLength, transitionBand ):
 
 	# check if integer
 	if (np.abs(filterLength - int(filterLength)) > 1e-10):
-		print('filterLength must be an integer')
+		print('halfBandDesign.py: filterLength must be an integer')
 		invalidInput = True
 
 	# check if too small
 	if (filterLength < 7):
-		print('filterLength must be larger than 6')
+		print('halfBandDesign.py: filterLength must be larger than 6')
 		invalidInput = True
 
 	# check if proper length
 	if (np.mod(filterLength+1,4) != 0):
-		print('filterLength+1 must be divisble by 4')
+		print('halfBandDesign.py: filterLength+1 must be divisble by 4')
 		invalidInput = True
 
 	# check range for transition band
 	if (transitionBand <= 0 or transitionBand >= 0.5):
-		print('transitionBand must be greater than 0 and less than 0.5')
+		print('halfBandDesign.py: transitionBand must be greater than 0 and less than 0.5')
 		invalidInput = True
 
 	if (invalidInput):
